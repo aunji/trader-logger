@@ -125,7 +125,7 @@ class TradeFormPage extends GetView<TradeFormController> {
 
   Widget _buildSessionDropdown() {
     return Obx(() => DropdownButtonFormField<TradeSession>(
-          initialValue: controller.session.value,
+          value: controller.session.value,
           decoration: const InputDecoration(
             labelText: 'Session',
             border: OutlineInputBorder(),

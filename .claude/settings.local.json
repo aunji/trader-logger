@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(flutter run:*)",
-      "Bash(flutter --version:*)"
+      "Bash(flutter --version:*)",
+      "Bash(flutter clean:*)",
+      "Bash(flutter pub get:*)",
+      "Bash(nc:*)",
+      "Bash(pkill:*)"
     ],
     "deny": [],
     "ask": []
