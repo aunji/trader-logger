@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "43142884194",
+    "project_id": "zentrydev-trader-logger",
+    "storage_bucket": "zentrydev-trader-logger.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43142884194:android:1341b2a1b793dbd698da3b",
+        "android_client_info": {
+          "package_name": "com.zentrydev.traderlogger"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUxtp0wIqEO0drOV_4v2q8prv0BBA3k4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

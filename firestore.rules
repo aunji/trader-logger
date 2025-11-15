@@ -1,0 +1,31 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper function to check if user owns the document
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Trade documents - users can only access their own trades
+    match /users/{userId}/trades/{tradeId} {
+      allow read, write: if isOwner(userId);
+
+      // Trade images subcollection
+      match /images/{imageId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // Block all other access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
