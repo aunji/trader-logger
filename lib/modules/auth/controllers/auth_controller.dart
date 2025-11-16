@@ -25,9 +25,15 @@ class AuthController extends GetxController {
   /// Handle auth state changes
   void _handleAuthStateChanged(User? user) {
     if (user == null) {
-      Get.offAllNamed(AppRoutes.login);
+      // Only navigate if not already on login page
+      if (Get.currentRoute != AppRoutes.login) {
+        Get.offAllNamed(AppRoutes.login);
+      }
     } else {
-      Get.offAllNamed(AppRoutes.tradeList);
+      // Only navigate if not already on trade list page
+      if (Get.currentRoute != AppRoutes.tradeList) {
+        Get.offAllNamed(AppRoutes.tradeList);
+      }
     }
   }
 

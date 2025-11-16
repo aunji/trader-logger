@@ -6,7 +6,10 @@
       "Bash(flutter clean:*)",
       "Bash(flutter pub get:*)",
       "Bash(nc:*)",
-      "Bash(pkill:*)"
+      "Bash(pkill:*)",
+      "Bash(flutter devices:*)",
+      "Bash(python3:*)",
+      "Bash(dart run:*)"
     ],
     "deny": [],
     "ask": []
